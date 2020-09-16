@@ -15,7 +15,6 @@ import com.mybooks.app.entities.User;
 public class UserController {
 
 	@GetMapping(value = "",
-            consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<User> fetchCustomer(@RequestParam("userId") Long userId) {
 

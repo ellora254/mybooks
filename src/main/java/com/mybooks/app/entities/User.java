@@ -18,7 +18,7 @@ public class User {
 	@Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.AUTO)
-	private String id;
+	private Long id;
 	
 	@Column
 	private String fullname;
@@ -39,11 +39,11 @@ public class User {
 	@Enumerated(EnumType.STRING)
 	private Role role;
 
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

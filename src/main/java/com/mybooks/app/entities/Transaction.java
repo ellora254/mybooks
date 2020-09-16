@@ -15,7 +15,7 @@ public class Transaction {
 	@Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.AUTO)
-	private String id;
+	private Long id;
 	
 	@OneToOne
 	private Book book;

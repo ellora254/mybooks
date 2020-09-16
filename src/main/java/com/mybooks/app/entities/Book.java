@@ -15,7 +15,7 @@ public class Book {
 	@Id
 	@Column(name = "ID")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private String id;
+	private Long id;
 
 	@Column
 	private String fileName;
@@ -27,10 +27,58 @@ public class Book {
 	private String filePath;
 
 	@Column
-	private Double fizeSize;
+	private Long fizeSize;
 
 	@ManyToOne
 	private User owner;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getFileName() {
+		return fileName;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
+	public String getFileType() {
+		return fileType;
+	}
+
+	public void setFileType(String fileType) {
+		this.fileType = fileType;
+	}
+
+	public String getFilePath() {
+		return filePath;
+	}
+
+	public void setFilePath(String filePath) {
+		this.filePath = filePath;
+	}
+
+	public Long getFizeSize() {
+		return fizeSize;
+	}
+
+	public void setFizeSize(Long fizeSize) {
+		this.fizeSize = fizeSize;
+	}
+
+	public User getOwner() {
+		return owner;
+	}
+
+	public void setOwner(User owner) {
+		this.owner = owner;
+	}
 	
 	
 }
